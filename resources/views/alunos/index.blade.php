@@ -2,17 +2,19 @@
 <html>
 <head>
     <title>Lista de Alunos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css" rel="stylesheet">
 <body class="container mt-5">
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <div class="d-flex justify-content-between mb-3">
-        <h1>Alunos</h1>
-        <a href="{{ route('alunos.create') }}" class="btn btn-primary">Novo Aluno</a>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Alunos</h1>
+    <div>
+        <a href="{{ route('tarefas.index') }}" class="btn btn-outline-dark me-2">Tarefas</a>
+        <a href="{{ route('alunos.create') }}" class="btn btn-outline-dark me-2">Novo Aluno</a>
     </div>
+</div>
 
     <table class="table table-striped">
         <thead>
